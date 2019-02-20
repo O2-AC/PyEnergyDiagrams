@@ -300,6 +300,8 @@ class ED:
                               linewidth=i[2],
                               color=i[3])
                 ax.add_line(line)
+                # This adds a static label to all links, copied from
+                # lzkelley: https://gist.github.com/lzkelley/0de9e8bf2a4fe96d2018f1b1bd5a0d3c
                 label_line(ax, line, "Just for testing")
         for box in self.electons_boxes:
             # here we add the boxes
