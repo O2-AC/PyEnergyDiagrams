@@ -16,7 +16,8 @@ y|
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from box_notation import plot_orbital_boxes
-
+from annotations import label_line
+import numpy as np
 
 class ED:
     def __init__(self, aspect='equal'):
@@ -299,7 +300,7 @@ class ED:
                               linewidth=i[2],
                               color=i[3])
                 ax.add_line(line)
-
+                label_line(ax, line, "Just for testing")
         for box in self.electons_boxes:
             # here we add the boxes
             # x,y,boxes,electrons,side,spacing_f
